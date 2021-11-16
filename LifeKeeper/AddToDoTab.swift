@@ -11,7 +11,7 @@ struct AddToDoTab: View {
     var body: some View {
         
         ZStack(alignment: .top) {
-            Text("Add To-Do")
+            Text("Cancel")
         }
                 
         
