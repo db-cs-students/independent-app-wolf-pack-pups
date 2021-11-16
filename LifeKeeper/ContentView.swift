@@ -10,12 +10,29 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Widget(width: 378, height: 150, widgetColor: Color.red) {}
             HStack {
-                Widget(width: 187, height: 311, widgetColor: Color.pink) {}
+                ZStack {
+                    Text("MONDAY")
+                        .font(.title)
+                    VStack {
+                        Rectangle()
+                            .frame(width: 221, height: 2, alignment: .center)
+                            .padding(.bottom, 35)
+                        Rectangle()
+                            .frame(width: 221, height: 2, alignment: .center)
+                    }
+                }
+                Rectangle()
+                    .frame(width: 15, height: 15, alignment: .center)
+                Rectangle()
+                    .frame(width: 15, height: 15, alignment: .center)
+            }.padding(.bottom, 90)
+            Widget(width: 378, height: 150, widgetColor: Color("Loblolly")) {Text("Mindfulness")}
+            HStack {
+                Widget(width: 187, height: 311, widgetColor: Color("Chatelle")) {}
                 VStack {
-                    Widget(width: 187, height: 153, widgetColor: Color.blue) {}
-                    Widget(width: 187, height: 153, widgetColor: Color.purple) {}
+                    Widget(width: 187, height: 153, widgetColor: Color("PaleOrange")) {}
+                    Widget(width: 187, height: 153, widgetColor: Color("Picasso")) {}
                 }
             }
         }
