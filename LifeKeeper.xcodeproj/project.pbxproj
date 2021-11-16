@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		3D987086273ED3F400C24998 /* LifeKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D987089273ED3F400C24998 /* LifeKeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeKeeperApp.swift; sourceTree = "<group>"; };
-		3D98708B273ED3F400C24998 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3D98708B273ED3F400C24998 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
 		3D98708D273ED3F700C24998 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D987090273ED3F700C24998 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D987092273ED3F700C24998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
