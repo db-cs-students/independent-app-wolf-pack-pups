@@ -9,41 +9,56 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
+			VStack {
+				HStack {
+							ZStack {
+								Capsule()
+								Text("All")
+									.foregroundColor(.white)
+								
+								
+							}
+					
+							ZStack {
+								Capsule()
+								Text("History")
+									.foregroundColor(.white)
+							}
+							ZStack {
+								Capsule()
+								Text("Chemistry")
+									.foregroundColor(.white)
+							}
+							ZStack {
+								Capsule()
+								Text("Work")
+									.foregroundColor(.white)
+							}
+				}
+				.padding(.leading, 10)
+				.padding(.trailing, 10)
+				.frame(height: 28, alignment: .center)
+				
+				HStack {
+					Text("Today (3)")
+							.font(.largeTitle)
+							.multilineTextAlignment(.leading)
+						.padding([.bottom, .trailing])
+					Text("Monday Nov 8 2021")
+						.font(.title3)
+
+				}
+				VStack {
 					ZStack {
-						Rectangle()
-							.frame(width: 50, height: 28, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-							.cornerRadius(25)
-						Text("All")
-							.padding()
-							.foregroundColor(.white)
-						
-					}
-					ZStack {
-						Rectangle()
-							.frame(width: 73, height: 28, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-							.cornerRadius(25)
-						Text("History")
-							.padding()
+						Capsule()
+						Text("Finish Project")
 							.foregroundColor(.white)
 					}
-					ZStack {
-						Rectangle()
-							.frame(width: 95, height: 28, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-							.cornerRadius(25)
-						Text("Chemistry")
-							.padding()
-							.foregroundColor(.white)
-					}
-					ZStack {
-						Rectangle()
-							.frame(width: 57, height: 28, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-							.cornerRadius(25)
-						Text("Work")
-							.padding()
-							.foregroundColor(.white)
-					}
-					}
+
+				}
+				.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+			}
+			
     }
 }
 
