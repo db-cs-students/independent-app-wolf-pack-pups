@@ -10,26 +10,26 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            HStack {
-                ZStack {
-                    Text("MONDAY")
-                        .font(.title)
-                    VStack {
-                        Rectangle()
-                            .frame(width: 221, height: 2, alignment: .center)
-                            .padding(.bottom, 35)
-                        Rectangle()
-                            .frame(width: 221, height: 2, alignment: .center)
-                    }
+            Title(day: "MONDAY")
+            Widget(width: 378, height: 150, widgetColor: Color("Loblolly")) {
+                VStack {
+                    Text("Mindfulness")
+                        .padding(.trailing, 240)
+                        .font(.headline)
+                    Text("Waking up with an organized day always makes you feel better!")
+                        .padding()
                 }
-                Rectangle()
-                    .frame(width: 15, height: 15, alignment: .center)
-                Rectangle()
-                    .frame(width: 15, height: 15, alignment: .center)
-            }.padding(.bottom, 90)
-            Widget(width: 378, height: 150, widgetColor: Color("Loblolly")) {Text("Mindfulness")}
+            }
             HStack {
-                Widget(width: 187, height: 311, widgetColor: Color("Chatelle")) {}
+                Widget(width: 187, height: 311, widgetColor: Color("Chatelle")) {
+                    VStack {
+                    Text("To-Do")
+                        .padding(.trailing, 90)
+                        .font(.title)
+                    Text("- Finish Project \n- WWII Present...\n- Homework #17\n- Copper Lab Re...\n- Finish Applicat...")
+                        .padding()
+                }
+            }
                 VStack {
                     Widget(width: 187, height: 153, widgetColor: Color("PaleOrange")) {}
                     Widget(width: 187, height: 153, widgetColor: Color("Picasso")) {}
@@ -67,5 +67,28 @@ struct Widget<Content: View>: View {
             content
             
         }
+    }
+}
+
+struct Title: View {
+    var day: String
+    var body: some View {
+        HStack {
+            ZStack {
+                Text(day)
+                    .font(.title)
+                VStack {
+                    Rectangle()
+                        .frame(width: 221, height: 2, alignment: .center)
+                        .padding(.bottom, 35)
+                    Rectangle()
+                        .frame(width: 221, height: 2, alignment: .center)
+                }
+            }
+            Rectangle()
+                .frame(width: 15, height: 15, alignment: .center)
+            Rectangle()
+                .frame(width: 15, height: 15, alignment: .center)
+        }.padding(.bottom, 90)
     }
 }
