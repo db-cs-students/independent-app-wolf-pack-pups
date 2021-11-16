@@ -33,20 +33,27 @@ struct ToDoDetails: View {
                 VStack(alignment: .leading, spacing: 30.0) {
                     Text("Room: W287")
                         .font(.system(size: 25.0))
+                    
                     Text("Date: 11/5/2021")
                         .font(.system(size: 25.0))
+                    
                     Text("Time: 2PM")
                         .font(.system(size: 25.0))
+                    
                     Text("Guests: Bob, Sue, Karen")
                         .font(.system(size: 25.0))
+                    
                     Text("Notes: Complete by 2PM and make sure it's submitted in MLA formatting.")
                         .font(.system(size: 25.0))
+                    
                 }
+                .padding()
             
             }
             
                 
         }
+        
         
     }
 }
