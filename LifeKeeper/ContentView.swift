@@ -51,16 +51,80 @@ struct ContentView: View {
 				VStack {
 					ZStack {
 						Capsule()
-						Text("Finish Project")
+							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+						VStack {
+							Text("Finish Project")
+									.font(.title2)
+								.foregroundColor(.white)
+							Text("Nov 8 2021")
+								.foregroundColor(.white)
+							
+						}
+					}
+					ZStack {
+						Capsule()
+							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+						VStack {
+							Text("Copper Lab Report")
+									.font(.title2)
+								.foregroundColor(.white)
+							Text("Nov 8 2021")
+								.foregroundColor(.white)
+						}
+					}
+					ZStack {
+						Capsule()
+							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+						Text("Finish Application")
+							.font(.title2)
+						.foregroundColor(.white)
+					}
+						
+					}
+				HStack {
+					Text("Future")
+						.font(.largeTitle)
+						.multilineTextAlignment(.leading)
+					.padding([.bottom, .trailing])
+					
+				}
+				VStack {
+					ZStack {
+							Capsule()
+								.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+						Text("WII Presentation")
+							.font(.title2)
 							.foregroundColor(.white)
 					}
+					ZStack {
+						Capsule()
+							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+						Text("Submit Homework #8")
+							.font(.title2)
+							.foregroundColor(.white)
+						
+					}
+					ZStack {
+						Capsule()
+							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+						Text("Work 7PM-9PM")
+							.font(.title2)
+							.foregroundColor(.white)
+						
+					}
+					ZStack {
+						Capsule()
+							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+						Text("Submit Homework #17")
+							.font(.title2)
+							.foregroundColor(.white)
+						
+					}				}
 
 				}
-				.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 			}
 			
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
