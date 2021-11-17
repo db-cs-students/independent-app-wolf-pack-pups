@@ -75,9 +75,14 @@ struct ContentView: View {
 					ZStack {
 						Capsule()
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						Text("Finish Application")
-							.font(.title2)
-						.foregroundColor(.white)
+						VStack {
+							Text("Finish Application")
+									.font(.title2)
+								.foregroundColor(.white)
+							Text("Nov 8 2021")
+								.foregroundColor(.white)
+							
+						}
 					}
 						
 					}
@@ -92,32 +97,48 @@ struct ContentView: View {
 					ZStack {
 							Capsule()
 								.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						Text("WII Presentation")
-							.font(.title2)
-							.foregroundColor(.white)
+						VStack {
+							Text("WII Presentation")
+									.font(.title2)
+								.foregroundColor(.white)
+							Text("Nov 24 2021")
+								.foregroundColor(.white)
+							
+						}
 					}
 					ZStack {
 						Capsule()
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						Text("Submit Homework #8")
-							.font(.title2)
-							.foregroundColor(.white)
+						VStack {
+							Text("Submit Homework #8")
+									.font(.title2)
+								.foregroundColor(.white)
+							Text("Nov 27 2021")
+								.foregroundColor(.white)						}
 						
 					}
 					ZStack {
 						Capsule()
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						Text("Work 7PM-9PM")
-							.font(.title2)
-							.foregroundColor(.white)
+						VStack {
+							Text("Work 7PM-9PM")
+									.font(.title2)
+								.foregroundColor(.white)
+							Text("Nov 28 2021")
+								.foregroundColor(.white)
+							
+						}
 						
 					}
 					ZStack {
 						Capsule()
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						Text("Submit Homework #17")
-							.font(.title2)
-							.foregroundColor(.white)
+						VStack {
+							Text("Submit Homework #17")
+									.font(.title2)
+								.foregroundColor(.white)
+							Text("Nov 28 2021")
+								.foregroundColor(.white)						}
 						
 					}				}
 
