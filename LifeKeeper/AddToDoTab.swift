@@ -9,11 +9,26 @@ import SwiftUI
 
 struct AddToDoTab: View {
     var body: some View {
-        
-        ZStack(alignment: .top) {
-            Text("Cancel")
-        }
+        VStack(alignment: .center) {
+            HStack(alignment: .top) {
+                Text("Cancel")
+                    .font(.system(size: 20))
+                Spacer()
+                Text("Add")
+                    .font(.system(size: 20))
+            }
+            .padding()
+            
+            VStack(alignment: .leading) {
+                Text("Name")
+                    .font(.system(size: 25.0))
+                    .background(RoundedRectangle(cornerRadius: 10.0).stroke())
+            }
+            Spacer()
                 
+            
+        }
+        
         
         
     }
