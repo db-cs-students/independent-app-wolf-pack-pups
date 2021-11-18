@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Title(day: "MONDAY")
+            Title()
             Widget(width: 378, height: 150, widgetColor: Color("Loblolly")) {
                 VStack {
                     Text("Mindfulness")
@@ -63,23 +63,7 @@ struct ContentView: View {
                 }
             }
             .padding(.bottom)
-            VStack {
-                Rectangle()
-                    .frame(width: 217, height: 2, alignment: .center)
-                    .foregroundColor(.barney)
-                VStack {
-                    Text("57°")
-                        .foregroundColor(.barney)
-                    Text("Kingsport, TN")
-                        .foregroundColor(.barney)
-                    Text("11/18, 1:15PM")
-                        .foregroundColor(.barney)
-                }
-                Rectangle()
-                    .frame(width: 217, height: 2, alignment: .center)
-                    .foregroundColor(.barney)
-            }
-            .padding(.trailing, 120)
+            WeatherStats(temp: 57)
         }
     }
 }
@@ -90,9 +74,11 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-/**
- A default widget layout with editable parameters to customize the look of the widget.
- */
+
+/// A default widget layout with editable parameters to customize the look of the widget.
+///
+/// - Parameter width: The width of the widget
+///
 struct Widget<Content: View>: View {
     private let width: CGFloat
     private let height: CGFloat
@@ -118,14 +104,13 @@ struct Widget<Content: View>: View {
     }
 }
 /**
- Creates the title section with the editable parameter of day.
+ Creates the title section.
  */
 struct Title: View {
-    var day: String
     var body: some View {
         HStack {
             ZStack {
-                Text(day)
+                Text(Date(), style: .date)
                     .font(.title)
                     .foregroundColor(Color("DarkGray"))
                 VStack {
@@ -142,11 +127,39 @@ struct Title: View {
                 .frame(width: 15, height: 15, alignment: .center)
             Rectangle()
                 .frame(width: 15, height: 15, alignment: .center)
-        }.padding(.bottom, 60)
+        }
+        .padding(.bottom, 60)
     }
 }
 
 extension Color {
     static let darkGray = Color("DarkGray")
     static let barney = Color("BarneyBlue")
+}
+
+struct WeatherStats: View {
+    var temp: Int
+    var body: some View {
+        VStack {
+            Rectangle()
+                .frame(width: 245, height: 2, alignment: .center)
+                .foregroundColor(.barney)
+            VStack {
+                Text("\(temp)°")
+                    .foregroundColor(.barney)
+                Text("Kingsport, TN")
+                    .foregroundColor(.barney)
+//                HStack {
+//                    Text(Date(), style: .time)
+//                        .foregroundColor(.barney)
+//                    Text(Date(), style: .date)
+//                        .foregroundColor(.barney)
+//                }
+            }
+            Rectangle()
+                .frame(width: 245, height: 2, alignment: .center)
+                .foregroundColor(.barney)
+        }
+        .padding(.trailing, 120)
+    }
 }
