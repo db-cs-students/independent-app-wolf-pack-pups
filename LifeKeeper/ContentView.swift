@@ -13,6 +13,7 @@ struct ContentView: View {
 				HStack {
 							ZStack {
 								Capsule()
+									.fill(Color.gray)
 								Text("All")
 									.foregroundColor(Color.white)
 								
@@ -44,47 +45,50 @@ struct ContentView: View {
 				
 				HStack {
 					Text("Today (3)")
+						.foregroundColor(/*@START_MENU_TOKEN@*/Color("fontColor")/*@END_MENU_TOKEN@*/)
 							.font(.largeTitle)
 							.multilineTextAlignment(.leading)
 						.padding([.bottom, .trailing])
 					Text("Monday Nov 8 2021")
 						.font(.title3)
-
+						.foregroundColor(/*@START_MENU_TOKEN@*/Color("fontColor")/*@END_MENU_TOKEN@*/)
 				}
 				VStack {
 					ZStack {
 						Capsule()
-							.fill(Color.black)
+							.fill(Color.gray)
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("Finish Project")
 									.font(.title2)
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							Text("Nov 8 2021")
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							
 						}
 					}
 					ZStack {
 						Capsule()
+							.fill(Color.gray)
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("Copper Lab Report")
 									.font(.title2)
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							Text("Nov 8 2021")
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 						}
 					}
 					ZStack {
 						Capsule()
+							.fill(Color.gray)
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("Finish Application")
 									.font(.title2)
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							Text("Nov 8 2021")
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							
 						}
 					}
@@ -92,6 +96,7 @@ struct ContentView: View {
 					}
 				HStack {
 					Text("Future")
+						.foregroundColor(/*@START_MENU_TOKEN@*/Color("fontColor")/*@END_MENU_TOKEN@*/)
 						.font(.largeTitle)
 						.multilineTextAlignment(.leading)
 					.padding([.bottom, .trailing])
@@ -100,49 +105,53 @@ struct ContentView: View {
 				VStack {
 					ZStack {
 							Capsule()
+								.fill(Color.gray)
 								.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("WII Presentation")
 									.font(.title2)
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							Text("Nov 24 2021")
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							
 						}
 					}
 					ZStack {
 						Capsule()
+							.fill(Color.gray)
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("Submit Homework #8")
 									.font(.title2)
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							Text("Nov 27 2021")
-								.foregroundColor(.white)						}
+								.foregroundColor(Color("fontColor"))						}
 						
 					}
 					ZStack {
 						Capsule()
+							.fill(Color.gray)
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("Work 7PM-9PM")
 									.font(.title2)
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							Text("Nov 28 2021")
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							
 						}
 						
 					}
 					ZStack {
 						Capsule()
+							.fill(Color.gray)
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("Submit Homework #17")
 									.font(.title2)
-								.foregroundColor(.white)
+								.foregroundColor(Color("fontColor"))
 							Text("Nov 28 2021")
-								.foregroundColor(.white)						}
+								.foregroundColor(Color("fontColor"))						}
 						
 					}				}
 
