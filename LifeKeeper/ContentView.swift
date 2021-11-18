@@ -14,7 +14,7 @@ struct ContentView: View {
 							ZStack {
 								Capsule()
 								Text("All")
-									.foregroundColor(.white)
+									.foregroundColor(Color.white)
 								
 								
 							}
@@ -23,19 +23,19 @@ struct ContentView: View {
 								Capsule()
 									.fill(Color("loBlolly"))
 								Text("History")
-									.foregroundColor(.white)
+									.foregroundColor(Color("fontColor"))
 							}
 							ZStack {
 								Capsule()
 									.fill(Color("paleYellow"))
 								Text("Chemistry")
-									.foregroundColor(.white)
+									.foregroundColor(Color("fontColor"))
 							}
 							ZStack {
 								Capsule()
 									.fill(Color("paleOrange"))
 								Text("Work")
-									.foregroundColor(.white)
+									.foregroundColor(Color("fontColor"))
 							}
 				}
 				.padding(.leading, 10)
