@@ -21,16 +21,19 @@ struct ContentView: View {
 					
 							ZStack {
 								Capsule()
+									.fill(Color("loBlolly"))
 								Text("History")
 									.foregroundColor(.white)
 							}
 							ZStack {
 								Capsule()
+									.fill(Color("paleYellow"))
 								Text("Chemistry")
 									.foregroundColor(.white)
 							}
 							ZStack {
 								Capsule()
+									.fill(Color("paleOrange"))
 								Text("Work")
 									.foregroundColor(.white)
 							}
@@ -51,6 +54,7 @@ struct ContentView: View {
 				VStack {
 					ZStack {
 						Capsule()
+							.fill(Color.black)
 							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
 						VStack {
 							Text("Finish Project")
