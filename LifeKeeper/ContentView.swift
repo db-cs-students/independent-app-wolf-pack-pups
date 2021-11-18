@@ -35,10 +35,51 @@ struct ContentView: View {
                     }
                 }
                 VStack {
-                    Widget(width: 187, height: 153, widgetColor: Color("PaleOrange")) {}
-                    Widget(width: 187, height: 153, widgetColor: Color("Picasso")) {}
+                    Widget(width: 187, height: 153, widgetColor: Color("PaleOrange")) {
+                        VStack {
+                            Text("Reminder")
+                                .padding(.trailing, 80)
+                                .padding(.bottom, 10)
+                                .foregroundColor(.darkGray)
+                                .font(.title3)
+                            Text("Make sure to carry an umbrella!")
+                                .padding(.leading, 6)
+                                .foregroundColor(.darkGray)
+                        }
+                    }
+                    Widget(width: 187, height: 153, widgetColor: Color("Picasso")) {
+                        VStack {
+                            Text("Inspirational Quote")
+                                .font(.title3)
+                                .padding(.trailing, 8)
+                                .padding(.bottom, 10)
+                                .foregroundColor(.darkGray)
+                            Text("\"Everything will be okay in the end. If it's not okay, it's not the end.\"")
+                                .padding(.leading, 15)
+                                .foregroundColor(.darkGray)
+                        }
+                        
+                    }
                 }
             }
+            .padding(.bottom)
+            VStack {
+                Rectangle()
+                    .frame(width: 217, height: 2, alignment: .center)
+                    .foregroundColor(.barney)
+                VStack {
+                    Text("57°")
+                        .foregroundColor(.barney)
+                    Text("Kingsport, TN")
+                        .foregroundColor(.barney)
+                    Text("11/18, 1:15PM")
+                        .foregroundColor(.barney)
+                }
+                Rectangle()
+                    .frame(width: 217, height: 2, alignment: .center)
+                    .foregroundColor(.barney)
+            }
+            .padding(.trailing, 120)
         }
     }
 }
@@ -101,10 +142,11 @@ struct Title: View {
                 .frame(width: 15, height: 15, alignment: .center)
             Rectangle()
                 .frame(width: 15, height: 15, alignment: .center)
-        }.padding(.bottom, 90)
+        }.padding(.bottom, 60)
     }
 }
 
 extension Color {
     static let darkGray = Color("DarkGray")
+    static let barney = Color("BarneyBlue")
 }
