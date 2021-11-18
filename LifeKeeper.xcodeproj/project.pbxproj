@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D7848002746CC5700C58F26 /* CapsuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7847FF2746CC5700C58F26 /* CapsuleView.swift */; };
 		3D98708A273ED3F400C24998 /* LifeKeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D987089273ED3F400C24998 /* LifeKeeperApp.swift */; };
 		3D98708C273ED3F400C24998 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D98708B273ED3F400C24998 /* ContentView.swift */; };
 		3D98708E273ED3F700C24998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D98708D273ED3F700C24998 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D7847FF2746CC5700C58F26 /* CapsuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleView.swift; sourceTree = "<group>"; };
 		3D987086273ED3F400C24998 /* LifeKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D987089273ED3F400C24998 /* LifeKeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeKeeperApp.swift; sourceTree = "<group>"; };
 		3D98708B273ED3F400C24998 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; tabWidth = 2; usesTabs = 1; };
@@ -54,6 +56,7 @@
 			children = (
 				3D987089273ED3F400C24998 /* LifeKeeperApp.swift */,
 				3D98708B273ED3F400C24998 /* ContentView.swift */,
+				3D7847FF2746CC5700C58F26 /* CapsuleView.swift */,
 				3D98708D273ED3F700C24998 /* Assets.xcassets */,
 				3D987092273ED3F700C24998 /* Info.plist */,
 				3D98708F273ED3F700C24998 /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7848002746CC5700C58F26 /* CapsuleView.swift in Sources */,
 				3D98708C273ED3F400C24998 /* ContentView.swift in Sources */,
 				3D98708A273ED3F400C24998 /* LifeKeeperApp.swift in Sources */,
 			);

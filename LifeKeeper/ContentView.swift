@@ -49,7 +49,7 @@ struct ContentView: View {
 							.font(.largeTitle)
 							.multilineTextAlignment(.leading)
 						.padding([.bottom, .trailing])
-					Text("Monday Nov 8 2021")
+					Text("\(Date())")
 						.font(.title3)
 						.foregroundColor(/*@START_MENU_TOKEN@*/Color("fontColor")/*@END_MENU_TOKEN@*/)
 				}
