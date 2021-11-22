@@ -14,6 +14,7 @@ struct ToDoDetails: View {
                 .ignoresSafeArea()
             
             VStack(alignment: .center, spacing: 20.0) {
+                
                 HStack(alignment: .top, spacing: 180.0) {
                     Text("I'm Done")
                         .font(.system(size: 23.0))
@@ -21,6 +22,7 @@ struct ToDoDetails: View {
                         .font(.system(size: 23.0))
 
                 }
+                
 
                 Text("Finish Project")
                     .font(.system(size: 40.0))
