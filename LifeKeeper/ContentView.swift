@@ -49,7 +49,7 @@ struct ContentView: View {
 							.font(.largeTitle)
 							.multilineTextAlignment(.leading)
 						.padding([.bottom, .trailing])
-					Text("\(Date())")
+					Text(Date(), style: .date)
 						.font(.title3)
 						.foregroundColor(/*@START_MENU_TOKEN@*/Color("fontColor")/*@END_MENU_TOKEN@*/)
 				}
@@ -57,40 +57,46 @@ struct ContentView: View {
 					ZStack {
 						Capsule()
 							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+							.frame(width: 351, height: 58, alignment: .leading)
 						VStack {
 							Text("Finish Project")
 									.font(.title2)
 								.foregroundColor(Color("fontColor"))
-							Text("Nov 8 2021")
+								.padding(.trailing, 150);							Text("Nov 8 2021")
 								.foregroundColor(Color("fontColor"))
+									.padding(.trailing, 180)
 							
 						}
 					}
 					ZStack {
 						Capsule()
 							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+							.frame(width: 351, height: 58, alignment: .leading)
 						VStack {
 							Text("Copper Lab Report")
 									.font(.title2)
 								.foregroundColor(Color("fontColor"))
+								.padding(.trailing, 150)
 							Text("Nov 8 2021")
 								.foregroundColor(Color("fontColor"))
+								.padding(.trailing, 180)
 						}
+						
 					}
 					ZStack {
 						Capsule()
 							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+							.frame(width: 351, height: 58, alignment: .leading)
 						VStack {
 							Text("Finish Application")
 									.font(.title2)
 								.foregroundColor(Color("fontColor"))
+								.padding(.trailing, 150)
 							Text("Nov 8 2021")
 								.foregroundColor(Color("fontColor"))
-							
+								.padding(.trailing, 180)
 						}
+						
 					}
 						
 					}
@@ -100,7 +106,7 @@ struct ContentView: View {
 						.font(.largeTitle)
 						.multilineTextAlignment(.leading)
 					.padding([.bottom, .trailing])
-					
+						.padding(.trailing, 250)
 				}
 				VStack {
 					ZStack {
@@ -111,9 +117,10 @@ struct ContentView: View {
 							Text("WII Presentation")
 									.font(.title2)
 								.foregroundColor(Color("fontColor"))
+								.padding(.trailing, 150)
 							Text("Nov 24 2021")
 								.foregroundColor(Color("fontColor"))
-							
+								.padding(.trailing, 180)
 						}
 					}
 					ZStack {
@@ -124,8 +131,11 @@ struct ContentView: View {
 							Text("Submit Homework #8")
 									.font(.title2)
 								.foregroundColor(Color("fontColor"))
+								.padding(.trailing, 110)
 							Text("Nov 27 2021")
-								.foregroundColor(Color("fontColor"))						}
+								.foregroundColor(Color("fontColor"))
+								.padding(.trailing, 180)
+						}
 						
 					}
 					ZStack {
@@ -136,9 +146,10 @@ struct ContentView: View {
 							Text("Work 7PM-9PM")
 									.font(.title2)
 								.foregroundColor(Color("fontColor"))
+								.padding(.trailing, 160)
 							Text("Nov 28 2021")
 								.foregroundColor(Color("fontColor"))
-							
+								.padding(.trailing, 180)
 						}
 						
 					}
@@ -150,8 +161,10 @@ struct ContentView: View {
 							Text("Submit Homework #17")
 									.font(.title2)
 								.foregroundColor(Color("fontColor"))
-							Text("Nov 28 2021")
-								.foregroundColor(Color("fontColor"))						}
+								.padding(.trailing, 100);							Text("Nov 28 2021")
+								.foregroundColor(Color("fontColor"))
+									.padding(.trailing, 150)
+						}
 						
 					}				}
 

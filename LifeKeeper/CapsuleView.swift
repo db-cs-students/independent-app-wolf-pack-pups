@@ -13,14 +13,7 @@ struct CapsuleView: View {
             Capsule()
                 .fill(Color.gray)
                 .frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-            VStack {
-                Text("")
-                        .font(.title2)
-                    .foregroundColor(Color("fontColor"))
-                Text("Nov 8 2021")
-                    .foregroundColor(Color(""))
-                
-            }    }
+            Task()    }
 }
 
 struct CapsuleView_Previews: PreviewProvider {
@@ -28,4 +21,17 @@ struct CapsuleView_Previews: PreviewProvider {
         CapsuleView()
     }
 }
+}
+
+struct Task: View {
+    var body: some View {
+        VStack {
+            Text("")
+                .font(.title2)
+                .foregroundColor(Color("fontColor"))
+            Text("")
+                .foregroundColor(Color(""))
+            
+        }
+    }
 }
