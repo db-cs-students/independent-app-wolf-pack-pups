@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  MainCategory.swift
 //  LifeKeeper
 //
-//  Created by Iyana G on 11/12/21.
+//  Created by Iyana G on 11/22/21.
 //
 
 import SwiftUI
@@ -173,8 +173,8 @@ struct ContentView: View {
 			
     }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainCategory_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainCategory()
     }
 }
