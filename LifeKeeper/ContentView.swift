@@ -74,11 +74,9 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
-/// A default widget layout with editable parameters to customize the look of the widget.
-///
-/// - Parameter width: The width of the widget
-///
+/**
+ A default widget layout with editable parameters to customize the look of the widget.
+ */
 struct Widget<Content: View>: View {
     private let width: CGFloat
     private let height: CGFloat
@@ -103,6 +101,7 @@ struct Widget<Content: View>: View {
         }
     }
 }
+
 /**
  Creates the title section.
  */
