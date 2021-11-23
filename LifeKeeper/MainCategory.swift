@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainCategory: View {
     var body: some View {
 			VStack {
 				HStack {
@@ -54,52 +54,10 @@ struct ContentView: View {
 						.foregroundColor(/*@START_MENU_TOKEN@*/Color("fontColor")/*@END_MENU_TOKEN@*/)
 				}
 				VStack {
-					ZStack {
-						Capsule()
-							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: .leading)
-						VStack {
-							Text("Finish Project")
-									.font(.title2)
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 150);							Text("Nov 8 2021")
-								.foregroundColor(Color("fontColor"))
-									.padding(.trailing, 180)
-							
-						}
-					}
-					ZStack {
-						Capsule()
-							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: .leading)
-						VStack {
-							Text("Copper Lab Report")
-									.font(.title2)
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 150)
-							Text("Nov 8 2021")
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 180)
-						}
-						
-					}
-					ZStack {
-						Capsule()
-							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: .leading)
-						VStack {
-							Text("Finish Application")
-									.font(.title2)
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 150)
-							Text("Nov 8 2021")
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 180)
-						}
-						
-					}
-						
-					}
+					TaskView(assignment: "Finish Project", date: "Nov 8 2021")
+					TaskView(assignment: "Copper Lab Report", date: "Nov 8 2021")
+							TaskView(assignment: "Finish Application", date: "Nov 8 2021")
+				}
 				HStack {
 					Text("Future")
 						.foregroundColor(/*@START_MENU_TOKEN@*/Color("fontColor")/*@END_MENU_TOKEN@*/)
@@ -108,73 +66,41 @@ struct ContentView: View {
 					.padding([.bottom, .trailing])
 						.padding(.trailing, 250)
 				}
-				VStack {
-					ZStack {
-							Capsule()
-								.fill(Color.gray)
-								.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						VStack {
-							Text("WII Presentation")
-									.font(.title2)
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 150)
-							Text("Nov 24 2021")
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 180)
-						}
-					}
-					ZStack {
-						Capsule()
-							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						VStack {
-							Text("Submit Homework #8")
-									.font(.title2)
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 110)
-							Text("Nov 27 2021")
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 180)
-						}
-						
-					}
-					ZStack {
-						Capsule()
-							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						VStack {
-							Text("Work 7PM-9PM")
-									.font(.title2)
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 160)
-							Text("Nov 28 2021")
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 180)
-						}
-						
-					}
-					ZStack {
-						Capsule()
-							.fill(Color.gray)
-							.frame(width: 351, height: 58, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-						VStack {
-							Text("Submit Homework #17")
-									.font(.title2)
-								.foregroundColor(Color("fontColor"))
-								.padding(.trailing, 100);							Text("Nov 28 2021")
-								.foregroundColor(Color("fontColor"))
-									.padding(.trailing, 150)
-						}
-						
-					}				}
+				TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
+					TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
+					TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
+					TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
+					
+				}
 
 				}
 			}
 			
-    }
 
 struct MainCategory_Previews: PreviewProvider {
     static var previews: some View {
         MainCategory()
     }
+}
+
+struct TaskView: View {
+	let assignment: String
+	let date: String
+	
+	var body: some View {
+		ZStack (alignment: .leading) {
+			Capsule()
+				.fill(Color.gray)
+				.frame(width: 351, height: 58, alignment: .center)
+			VStack (alignment: .leading) {
+				Text(assignment)
+					.font(.title2)
+					.foregroundColor(Color("fontColor"))
+				Text(date)
+						.foregroundColor(Color("fontColor"))
+					.padding(.leading)
+			}
+			.padding(.leading)
+		}
+	}
 }
