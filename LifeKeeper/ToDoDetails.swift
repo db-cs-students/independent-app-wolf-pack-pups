@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ToDoDetails: View {
+    let name: String
+    let room: String
+    let date: String
+    let category: String
+    let time: String
+    let guests: String
+    let othernotes: String
     var body: some View {
         ZStack(alignment: .top) {
             Color("Background")
@@ -24,28 +31,28 @@ struct ToDoDetails: View {
                 }
                 
 
-                Text("Finish Project")
+                Text(name)
                     .font(.system(size: 40.0))
                     .padding()
                 
-                Text("History")
+                Text(category)
                     .font(.system(size: 20.0))
                     .foregroundColor(Color.gray)
                 
                 VStack(alignment: .leading, spacing: 30.0) {
-                    Text("Room: W287")
+                    Text("Room: \(room)")
                         .font(.system(size: 25.0))
                     
-                    Text("Date: 11/5/2021")
+                    Text("Date: \(date)")
                         .font(.system(size: 25.0))
                     
-                    Text("Time: 2PM")
+                    Text("Time: \(time)")
                         .font(.system(size: 25.0))
                     
-                    Text("Guests: Bob, Sue, Karen")
+                    Text("Guests: \(guests)")
                         .font(.system(size: 25.0))
                     
-                    Text("Notes: Complete by 2PM and make sure it's submitted in MLA formatting.")
+                    Text("Notes: \(othernotes)")
                         .font(.system(size: 25.0))
                     
                 }
@@ -62,6 +69,6 @@ struct ToDoDetails: View {
 
 struct ToDoDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoDetails()
+        ToDoDetails(name: "Finish homework", room: "W287", date: "11/5/21", category: "History", time: "2PM", guests: "Bob, Sue, Karen", othernotes: "Complete by 2PM and make sure it's submitted in MLA formatting.")
     }
 }
