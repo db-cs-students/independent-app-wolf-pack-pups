@@ -9,62 +9,67 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        CustomGradient {
-            VStack {
-                Title()
-                Widget(width: 378, height: 150, widgetColor: Color("Loblolly")) {
-                    VStack {
-                        Text("Mindfulness")
-                            .padding(.trailing, 230)
-                            .font(.title2)
-                            .foregroundColor(Color.darkGray)
-                        Text("Waking up with an organized day always makes you feel better!")
-                            .padding()
-                            .foregroundColor(Color.darkGray)
-                    }
-                }
-                HStack {
-                    Widget(width: 187, height: 311, widgetColor: Color("Chatelle")) {
+        NavigationView {
+            CustomGradient {
+                VStack {
+                    Title()
+                    Widget(width: 378, height: 150, widgetColor: Color("Loblolly")) {
                         VStack {
-                            Text("To-Do")
-                                .padding(.trailing, 90)
-                                .font(.title)
+                            Text("Mindfulness")
+                                .padding(.trailing, 230)
+                                .font(.title2)
                                 .foregroundColor(Color.darkGray)
-                            Text("- Finish Project \n- WWII Present...\n- Homework #17\n- Copper Lab Re...\n- Finish Applicat...")
+                            Text("Waking up with an organized day always makes you feel better!")
                                 .padding()
                                 .foregroundColor(Color.darkGray)
                         }
                     }
-                    VStack {
-                        Widget(width: 187, height: 153, widgetColor: Color("PaleOrange")) {
-                            VStack {
-                                Text("Reminder")
-                                    .padding(.trailing, 80)
-                                    .padding(.bottom, 10)
-                                    .foregroundColor(.darkGray)
-                                    .font(.title3)
-                                Text("Make sure to carry an umbrella!")
-                                    .padding(.leading, 6)
-                                    .foregroundColor(.darkGray)
+                    
+                    HStack {
+                        NavigationLink(destination: Categories()) {
+                            Widget(width: 187, height: 311, widgetColor: Color("Chatelle")) {
+                                VStack {
+                                    Text("To-Do")
+                                        .padding(.trailing, 90)
+                                        .font(.title)
+                                        .foregroundColor(Color.darkGray)
+                                    Text("- Finish Project \n- WWII Present...\n- Homework #17\n- Copper Lab Re...\n- Finish Applicat...")
+                                        .padding()
+                                        .foregroundColor(Color.darkGray)
+                                }
                             }
                         }
-                        Widget(width: 187, height: 153, widgetColor: Color("Picasso")) {
-                            VStack {
-                                Text("Inspirational Quote")
-                                    .font(.title3)
-                                    .padding(.trailing, 8)
-                                    .padding(.bottom, 10)
-                                    .foregroundColor(.darkGray)
-                                Text("\"Everything will be okay in the end. If it's not okay, it's not the end.\"")
-                                    .padding(.leading, 15)
-                                    .foregroundColor(.darkGray)
+                        VStack {
+                            Widget(width: 187, height: 153, widgetColor: Color("PaleOrange")) {
+                                VStack {
+                                    Text("Reminder")
+                                        .padding(.trailing, 80)
+                                        .padding(.bottom, 10)
+                                        .foregroundColor(.darkGray)
+                                        .font(.title3)
+                                    Text("Make sure to carry an umbrella!")
+                                        .padding(.leading, 6)
+                                        .foregroundColor(.darkGray)
+                                }
                             }
-                            
+                            Widget(width: 187, height: 153, widgetColor: Color("Picasso")) {
+                                VStack {
+                                    Text("Inspirational Quote")
+                                        .font(.title3)
+                                        .padding(.trailing, 8)
+                                        .padding(.bottom, 10)
+                                        .foregroundColor(.darkGray)
+                                    Text("\"Everything will be okay in the end. If it's not okay, it's not the end.\"")
+                                        .padding(.leading, 15)
+                                        .foregroundColor(.darkGray)
+                                }
+                                
+                            }
                         }
                     }
+                    .padding(.bottom)
+                    WeatherStats(temp: 57)
                 }
-                .padding(.bottom)
-                WeatherStats(temp: 57)
             }
         }
     }
@@ -151,12 +156,6 @@ struct WeatherStats: View {
                     .foregroundColor(.barney)
                 Text("Kingsport, TN")
                     .foregroundColor(.barney)
-//                HStack {
-//                    Text(Date(), style: .time)
-//                        .foregroundColor(.barney)
-//                    Text(Date(), style: .date)
-//                        .foregroundColor(.barney)
-//                }
             }
             Rectangle()
                 .frame(width: 245, height: 2, alignment: .center)
