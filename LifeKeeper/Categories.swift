@@ -11,12 +11,13 @@ struct Categories: View {
     var body: some View {
         CustomGradient{
             VStack {
+                
                 HStack {
                     ZStack {
                         Capsule()
-                            .fill(Color.gray)
+                            .fill(Color.white)
                         Text("All")
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color("DarkGray"))
                         
                         
                     }
@@ -91,7 +92,7 @@ struct TaskView: View {
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
-                .fill(Color.gray)
+                .fill(Color("Transgray"))
                 .frame(width: 351, height: 58, alignment: .center)
             VStack (alignment: .leading) {
                 Text(assignment)
