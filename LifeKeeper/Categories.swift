@@ -11,71 +11,73 @@ struct Categories: View {
     var body: some View {
         CustomGradient{
             VStack {
-                HStack {
-                    ZStack {
-                        Capsule()
-                            .fill(Color.gray)
-                        Text("All")
-                            .foregroundColor(Color.white)
-                        
-                        
-                    }
-                    
-                    ZStack {
-                        Capsule()
-                            .fill(Color("Loblolly"))
-                        Text("History")
-                            .foregroundColor(Color("DarkGray"))
-                    }
-                    ZStack {
-                        Capsule()
-                            .fill(Color("paleYellow"))
-                        Text("Chemistry")
-                            .foregroundColor(Color("DarkGray"))
-                    }
-                    ZStack {
-                        Capsule()
-                            .fill(Color("PaleOrange"))
-                        Text("Work")
-                            .foregroundColor(Color("DarkGray"))
-                    }
-                }
-                .padding(.leading, 10)
-                .padding(.trailing, 10)
-                .frame(height: 28, alignment: .center)
                 
                 HStack {
-                    Text("Today (3)")
-                        .foregroundColor(Color("DarkGray"))
-                        .font(.largeTitle)
-                        .multilineTextAlignment(.leading)
-                        .padding([.bottom, .trailing])
-                    Text(Date(), style: .date)
-                        .font(.title3)
-                        .foregroundColor(Color("DarkGray"))
+                    ZStack {
+                        Capsule()
+                            .fill(Color.white)
+                        Text("All")
+                            .foregroundColor(Color("DarkGray"))
+                        
+                        
+                    }
+                        ZStack {
+                            Capsule()
+                                .fill(Color("Loblolly"))
+                            Text("History")
+                                .foregroundColor(Color("DarkGray"))
+                        }
+                        ZStack {
+                            Capsule()
+                                .fill(Color("paleYellow"))
+                            Text("Chemistry")
+                                .foregroundColor(Color("DarkGray"))
+                        }
+                        ZStack {
+                            Capsule()
+                                .fill(Color("PaleOrange"))
+                            Text("Work")
+                                .foregroundColor(Color("DarkGray"))
+                        }
+                    }
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .frame(height: 28, alignment: .center)
+                    
+                    HStack {
+                        Text("Today (3)")
+                            .foregroundColor(Color("DarkGray"))
+                            .font(.largeTitle)
+                            .multilineTextAlignment(.leading)
+                            .padding([.bottom, .trailing])
+                        Text(Date(), style: .date)
+                            .font(.title3)
+                            .foregroundColor(Color("DarkGray"))
+                    }
+                    VStack {
+                        TaskView(assignment: "Finish Project", date: "Nov 8 2021")
+                        TaskView(assignment: "Copper Lab Report", date: "Nov 8 2021")
+                        TaskView(assignment: "Finish Application", date: "Nov 8 2021")
+                    }
+                    HStack {
+                        Text("Future")
+                            .foregroundColor(Color("DarkGray"))
+                            .font(.largeTitle)
+                            .multilineTextAlignment(.leading)
+                            .padding([.bottom, .trailing])
+                            .padding(.trailing, 250)
+                    }
+                    TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
+                    TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
+                    TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
+                    TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
+                    
                 }
-                VStack {
-                    TaskView(assignment: "Finish Project", date: "Nov 8 2021")
-                    TaskView(assignment: "Copper Lab Report", date: "Nov 8 2021")
-                    TaskView(assignment: "Finish Application", date: "Nov 8 2021")
-                }
-                HStack {
-                    Text("Future")
-                        .foregroundColor(Color("DarkGray"))
-                        .font(.largeTitle)
-                        .multilineTextAlignment(.leading)
-                        .padding([.bottom, .trailing])
-                        .padding(.trailing, 250)
-                }
-                TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
-                TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
-                TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
-                TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
                 
             }
+            .navigationBarItems(trailing: Image(systemName: "plus"))
             
         }
-    }
 }
 
 struct Categories_Previews: PreviewProvider {
@@ -91,7 +93,7 @@ struct TaskView: View {
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
-                .fill(Color.gray)
+                .fill(Color("Transgray"))
                 .frame(width: 351, height: 58, alignment: .center)
             VStack (alignment: .leading) {
                 Text(assignment)
@@ -105,3 +107,4 @@ struct TaskView: View {
         }
     }
 }
+
