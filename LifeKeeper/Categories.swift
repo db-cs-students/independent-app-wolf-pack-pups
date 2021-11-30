@@ -18,6 +18,9 @@ struct Categories: View {
                             .fill(Color.white)
                         Text("All")
                             .foregroundColor(Color("DarkGray"))
+                        
+                        
+                    }
                         ZStack {
                             Capsule()
                                 .fill(Color("Loblolly"))
@@ -104,3 +107,4 @@ struct TaskView: View {
         }
     }
 }
+
