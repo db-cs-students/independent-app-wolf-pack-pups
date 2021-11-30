@@ -9,35 +9,36 @@ import SwiftUI
 
 struct Categories: View {
     var body: some View {
+        CustomGradient{
             VStack {
                 HStack {
-                            ZStack {
-                                Capsule()
-                                    .fill(Color.gray)
-                                Text("All")
-                                    .foregroundColor(Color.white)
-                                
-                                
-                            }
+                    ZStack {
+                        Capsule()
+                            .fill(Color.gray)
+                        Text("All")
+                            .foregroundColor(Color.white)
+                        
+                        
+                    }
                     
-                            ZStack {
-                                Capsule()
-                                    .fill(Color("Loblolly"))
-                                Text("History")
-                                    .foregroundColor(Color("DarkGray"))
-                            }
-                            ZStack {
-                                Capsule()
-                                    .fill(Color("paleYellow"))
-                                Text("Chemistry")
-                                    .foregroundColor(Color("DarkGray"))
-                            }
-                            ZStack {
-                                Capsule()
-                                    .fill(Color("PaleOrange"))
-                                Text("Work")
-                                    .foregroundColor(Color("DarkGray"))
-                            }
+                    ZStack {
+                        Capsule()
+                            .fill(Color("Loblolly"))
+                        Text("History")
+                            .foregroundColor(Color("DarkGray"))
+                    }
+                    ZStack {
+                        Capsule()
+                            .fill(Color("paleYellow"))
+                        Text("Chemistry")
+                            .foregroundColor(Color("DarkGray"))
+                    }
+                    ZStack {
+                        Capsule()
+                            .fill(Color("PaleOrange"))
+                        Text("Work")
+                            .foregroundColor(Color("DarkGray"))
+                    }
                 }
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
@@ -46,8 +47,8 @@ struct Categories: View {
                 HStack {
                     Text("Today (3)")
                         .foregroundColor(Color("DarkGray"))
-                            .font(.largeTitle)
-                            .multilineTextAlignment(.leading)
+                        .font(.largeTitle)
+                        .multilineTextAlignment(.leading)
                         .padding([.bottom, .trailing])
                     Text(Date(), style: .date)
                         .font(.title3)
@@ -56,26 +57,26 @@ struct Categories: View {
                 VStack {
                     TaskView(assignment: "Finish Project", date: "Nov 8 2021")
                     TaskView(assignment: "Copper Lab Report", date: "Nov 8 2021")
-                            TaskView(assignment: "Finish Application", date: "Nov 8 2021")
+                    TaskView(assignment: "Finish Application", date: "Nov 8 2021")
                 }
                 HStack {
                     Text("Future")
                         .foregroundColor(Color("DarkGray"))
                         .font(.largeTitle)
                         .multilineTextAlignment(.leading)
-                    .padding([.bottom, .trailing])
+                        .padding([.bottom, .trailing])
                         .padding(.trailing, 250)
                 }
                 TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
-                    TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
-                    TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
-                    TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
-                    
-                }
-
-                }
+                TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
+                TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
+                TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
+                
             }
             
+        }
+    }
+}
 
 struct Categories_Previews: PreviewProvider {
     static var previews: some View {
@@ -97,7 +98,7 @@ struct TaskView: View {
                     .font(.title2)
                     .foregroundColor(Color("DarkGray"))
                 Text(date)
-                        .foregroundColor(Color("DarkGray"))
+                    .foregroundColor(Color("DarkGray"))
                     .padding(.leading)
             }
             .padding(.leading)
