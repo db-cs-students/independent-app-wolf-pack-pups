@@ -22,7 +22,7 @@ struct Categories: View {
                     
                             ZStack {
                                 Capsule()
-                                    .fill(Color("loBlolly"))
+                                    .fill(Color("Loblolly"))
                                 Text("History")
                                     .foregroundColor(Color("DarkGray"))
                             }
@@ -34,7 +34,7 @@ struct Categories: View {
                             }
                             ZStack {
                                 Capsule()
-                                    .fill(Color("paleOrange"))
+                                    .fill(Color("PaleOrange"))
                                 Text("Work")
                                     .foregroundColor(Color("DarkGray"))
                             }
