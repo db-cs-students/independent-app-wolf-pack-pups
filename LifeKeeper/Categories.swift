@@ -9,19 +9,15 @@ import SwiftUI
 
 struct Categories: View {
     var body: some View {
-        
-            CustomGradient{
-                VStack {
-                    HStack {
-                        ZStack {
-                            Capsule()
-                                .fill(Color.gray)
-                            Text("All")
-                                .foregroundColor(Color.white)
-                            
-                            
-                        }
-                        
+        CustomGradient{
+            VStack {
+                
+                HStack {
+                    ZStack {
+                        Capsule()
+                            .fill(Color.white)
+                        Text("All")
+                            .foregroundColor(Color("DarkGray"))
                         ZStack {
                             Capsule()
                                 .fill(Color("Loblolly"))
@@ -94,7 +90,7 @@ struct TaskView: View {
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
-                .fill(Color.gray)
+                .fill(Color("Transgray"))
                 .frame(width: 351, height: 58, alignment: .center)
             VStack (alignment: .leading) {
                 Text(assignment)
