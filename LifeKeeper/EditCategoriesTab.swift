@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EditCategoriesTab: View {
+    let categories: [String] = []
+    
     var body: some View {
         CustomGradient {
             VStack(alignment: .center, spacing: 10.0) {
@@ -33,9 +35,20 @@ struct EditCategoriesTab: View {
                 .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.gray).frame(width: 300, height: 30))
                 .padding()
                 
-                PurpleCategory()
-                PurpleCategory()
-                PurpleCategory()
+                Group {
+                    if !categories.isEmpty {
+                        ScrollView {
+                            ForEach(categories, id: \.self) { category in
+                                PurpleCategory()
+                                
+                            }
+                        }
+                    } else {
+                        Text("You haven't added any categories yet!")
+                            .foregroundColor(.red)
+                        
+                    }
+                }
                 
                     
                 Spacer()
@@ -74,7 +87,7 @@ struct PurpleCategory: View {
                 )
                 .shadow(radius: 5, x: 5, y: 5)
             
-            Text("You haven't added any categories yet")
+            Text("")
                 .font(.system(size: 18.0))
                 
         }

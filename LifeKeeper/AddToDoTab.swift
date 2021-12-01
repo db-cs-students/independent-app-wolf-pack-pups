@@ -38,6 +38,8 @@ struct AddToDoTab: View {
                         
                         Text("Edit Categories")
                             .font(.system(size: 15))
+                            
+                        
                     }
                     .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.gray).frame(width: 300, height: 30))
                     .padding()
