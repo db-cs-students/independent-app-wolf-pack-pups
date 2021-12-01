@@ -40,9 +40,16 @@ struct EditCategoriesTab: View {
                     
                 Spacer()
                 
-                Text("Add Category")
                     
+                Text("Add Category")
+                    .font(.system(size: 25.0))
+                    .foregroundColor(Color.white)
+                    .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.purple).frame(width: 200, height: 40))
+                Spacer()
+                    .padding()
             }
+            
+            
         }
     }
 }
@@ -59,16 +66,16 @@ struct PurpleCategory: View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
                 .frame(height: 40)
-                .foregroundColor(.white)
-                .opacity(0.4)
+                .foregroundColor(.black)
+                .opacity(0.1)
                 .overlay(
                     RoundedRectangle(cornerRadius: 15)
                         .stroke(Color("BarneyBlue"), lineWidth: 5)
                 )
                 .shadow(radius: 5, x: 5, y: 5)
             
-            Text("")
-                .font(.system(size: 25.0))
+            Text("You haven't added any categories yet")
+                .font(.system(size: 18.0))
                 
         }
         
