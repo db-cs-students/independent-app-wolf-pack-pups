@@ -67,10 +67,10 @@ struct Categories: View {
                             .padding([.bottom, .trailing])
                             .padding(.trailing, 250)
                     }
-                    TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
-                    TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
-                    TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
-                    TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
+                TaskView(assignment: "WII Presentation", date: "Nov 24 2021" )
+                TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021" )
+                TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021" )
+                TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021" )
                     
                 }
                 
@@ -89,12 +89,20 @@ struct Categories_Previews: PreviewProvider {
 struct TaskView: View {
     let assignment: String
     let date: String
+    var borderColor: Color {
+        return [Color("paleYellow"), Color("Loblolly"), Color("PaleOrange")].randomElement()!
+    }
     
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
                 .fill(Color("Transgray"))
                 .frame(width: 351, height: 58, alignment: .center)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 40)
+                        .stroke((borderColor),
+                                lineWidth: 3)
+                )
             VStack (alignment: .leading) {
                 Text(assignment)
                     .font(.title2)
