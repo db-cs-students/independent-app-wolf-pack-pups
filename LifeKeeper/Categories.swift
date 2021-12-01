@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Categories: View {
+    @State var showingSheet = false
     var body: some View {
         CustomGradient{
             VStack {
@@ -67,17 +68,27 @@ struct Categories: View {
                             .padding([.bottom, .trailing])
                             .padding(.trailing, 250)
                     }
-                    TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
-                    TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
-                    TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
-                    TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
-                    
-                }
+                TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
+                TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
+                TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
+                TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
+                
                 
             }
-            .navigationBarItems(trailing: Image(systemName: "plus"))
             
         }
+        .navigationBarItems(trailing: Button("+") {
+            showingSheet.toggle()
+        }
+        .sheet(isPresented: $showingSheet) {
+            NavigationView {
+                AddToDoTab()
+                    .navigationBarItems(leading: Button("Cancel", action:{showingSheet.toggle()}), trailing: Button("Add", action:{showingSheet.toggle()}))
+            }
+        }
+        )
+        
+    }
 }
 
 struct Categories_Previews: PreviewProvider {
