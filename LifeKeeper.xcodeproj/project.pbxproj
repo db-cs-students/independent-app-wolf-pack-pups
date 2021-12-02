@@ -17,6 +17,7 @@
 		3D98708E273ED3F700C24998 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D98708D273ED3F700C24998 /* Assets.xcassets */; };
 		3D987091273ED3F700C24998 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D987090273ED3F700C24998 /* Preview Assets.xcassets */; };
 		3DB4273D2744200400CD69EB /* AddToDoTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB4273C2744200400CD69EB /* AddToDoTab.swift */; };
+		3DC709F1275934E60030BF91 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC709F0275934E60030BF91 /* CustomPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3D987090273ED3F700C24998 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3D987092273ED3F700C24998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DB4273C2744200400CD69EB /* AddToDoTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoTab.swift; sourceTree = "<group>"; };
+		3DC709F0275934E60030BF91 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3D7F6F2D27554BAC00685B83 /* Categories.swift */,
+				3DC709F0275934E60030BF91 /* CustomPickerView.swift */,
 				3D987089273ED3F400C24998 /* LifeKeeperApp.swift */,
 				3D98708B273ED3F400C24998 /* ContentView.swift */,
 				3D7F6F2B2755440E00685B83 /* BackgroundsView.swift */,
@@ -170,6 +173,7 @@
 				3D98708A273ED3F400C24998 /* LifeKeeperApp.swift in Sources */,
 				3D7F6F2C2755440E00685B83 /* BackgroundsView.swift in Sources */,
 				3D8CFF4F27569341006A0462 /* EditCategoriesTab.swift in Sources */,
+				3DC709F1275934E60030BF91 /* CustomPickerView.swift in Sources */,
 				3D6549A62742CF6E00E24265 /* ToDoDetails.swift in Sources */,
 				3DB4273D2744200400CD69EB /* AddToDoTab.swift in Sources */,
 			);

@@ -15,10 +15,17 @@ struct AddToDoTab: View {
     @State private var time: String = ""
     @State private var guests: String = ""
     @State private var othernotes: String = ""
+    @State public var selectedScreen = 0
     var body: some View {
         NavigationView {
             CustomGradient {
                 VStack(alignment: .center, spacing: 10.0) {
+                    Picker(selection: $selectedScreen, label: Text("")) {
+                        Text("Add To-Do").tag(0)
+                        Text("Edit Categories").tag(1)
+                    }
+                    .padding()
+                    .pickerStyle(SegmentedPickerStyle())
                     PurpleTextField(placeholder: "Task Name", value: $name)
                     PurpleTextField(placeholder: "Room Number", value: $room)
                     PurpleTextField(placeholder: "Category", value: $category)
