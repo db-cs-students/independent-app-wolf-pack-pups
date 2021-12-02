@@ -87,7 +87,7 @@ struct PurpleCategory: View {
                 )
                 .shadow(radius: 5, x: 5, y: 5)
             
-            Text("")
+            Text("  ")
                 .font(.system(size: 18.0))
                 
         }
