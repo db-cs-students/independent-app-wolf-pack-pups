@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct CustomPickerView: View {
-    @State var selectedScreen = 0
+    @State var pickerSelection = 0
     var body: some View {
-        Picker(selection: $selectedScreen, label: Text("")) {
-            Text("Add To-Do").tag(0)
-            Text("Edit Categories").tag(1)
+        NavigationView {
+            NavigationLink(destination: EditCategoriesTab()) {
+                Picker(selection: $pickerSelection, label: Text("")) {
+                    Text("Add To-Do").tag(0)
+                    Text("Edit Categories").tag(1)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                
+            }
         }
-        .pickerStyle(SegmentedPickerStyle())
     }
 }
 
@@ -22,5 +27,6 @@ struct CustomPickerView: View {
 struct CustomPickerView_Previews: PreviewProvider {
     static var previews: some View {
         CustomPickerView()
+
     }
 }
