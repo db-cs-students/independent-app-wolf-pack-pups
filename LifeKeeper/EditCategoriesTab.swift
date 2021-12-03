@@ -11,58 +11,63 @@ struct EditCategoriesTab: View {
     let categories: [String] = []
     
     var body: some View {
-        CustomGradient {
-            VStack(alignment: .center, spacing: 10.0) {
-                HStack(alignment: .top) {
-                    Text("Cancel")
-                        .font(.system(size: 20))
-                    Spacer()
-                    Text("Save")
-                        .font(.system(size: 20))
-                }
-                .padding()
-                
-                HStack(alignment: .top, spacing: 60) {
-                    Text("Add To-Do")
-                        .font(.system(size: 15))
-                        
-                    
-                    Text("Edit Categories")
-                        .font(.system(size: 15))
-                        .foregroundColor(Color.white)
-                        .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.purple).frame(width: 140, height: 25))
-                }
-                .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.gray).frame(width: 300, height: 30))
-                .padding()
-                
-                Group {
-                    if !categories.isEmpty {
-                        ScrollView {
-                            ForEach(categories, id: \.self) { category in
-                                PurpleCategory()
-                                
-                            }
-                        }
-                    } else {
-                        Text("You haven't added any categories yet!")
-                            .foregroundColor(.red)
-                        
+        NavigationView {
+            
+            CustomGradient {
+                VStack(alignment: .center, spacing: 10.0) {
+                    HStack(alignment: .top) {
+                        Text("Cancel")
+                            .font(.system(size: 20))
+                        Spacer()
+                        Text("Save")
+                            .font(.system(size: 20))
                     }
+                    .padding()
+                    
+                    HStack(alignment: .top, spacing: 60) {
+                        Text("Add To-Do")
+                            .font(.system(size: 15))
+                        
+                        
+                        Text("Edit Categories")
+                            .font(.system(size: 15))
+                            .foregroundColor(Color.white)
+                            .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.purple).frame(width: 140, height: 25))
+                    }
+                    .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.gray).frame(width: 300, height: 30))
+                    .padding()
+                    
+                    Group {
+                        if !categories.isEmpty {
+                            ScrollView {
+                                ForEach(categories, id: \.self) { category in
+                                    PurpleCategory()
+                                    
+                                }
+                            }
+                        } else {
+                            Text("You haven't added any categories yet!")
+                                .foregroundColor(.red)
+                            
+                        }
+                    }
+                    
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: AddCategoryTab()) {
+                        
+                        Text("Add Category")
+                            .foregroundColor(Color.white)
+                    }
+                    .font(.system(size: 25.0))
+                    .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.purple).frame(width: 200, height: 40))
+                    Spacer()
+                        .padding()
                 }
                 
-                    
-                Spacer()
                 
-                    
-                Text("Add Category")
-                    .font(.system(size: 25.0))
-                    .foregroundColor(Color.white)
-                    .background(RoundedRectangle(cornerRadius: 10.0).fill(Color.purple).frame(width: 200, height: 40))
-                Spacer()
-                    .padding()
             }
-            
-            
         }
     }
 }

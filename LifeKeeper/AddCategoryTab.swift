@@ -36,19 +36,19 @@ struct AddCategoryTab: View {
                         .frame(width: 300, height: 200)
                         .background(RoundedRectangle(cornerRadius: 20.0)
                                         .opacity(0.1)
-                                    .overlay(RoundedRectangle(cornerRadius: 15.0).stroke(Color("BarneyBlue"), lineWidth: 3)))
+                                        .overlay(RoundedRectangle(cornerRadius: 15.0).stroke(Color("BarneyBlue"), lineWidth: 3)))
                         
                 }
+                Text("Color")
+                    .font(.system(size: 25.0))
+                    .frame(width: 300, height: 40)
+                    .background(RoundedRectangle(cornerRadius: 25.0)
+                                    .opacity(0.1)
+                                    .overlay(RoundedRectangle(cornerRadius: 15.0).stroke(Color("BarneyBlue"), lineWidth: 3)))
                 Spacer()
                     .padding()
                 
             }
-            Text("Color")
-                .font(.system(size: 25.0))
-                .frame(width: 300, height: 40)
-                .background(RoundedRectangle(cornerRadius: 25.0)
-                                .opacity(0.1)
-                                .overlay(RoundedRectangle(cornerRadius: 15.0).stroke(Color("BarneyBlue"), lineWidth: 3)))
             
         }
     }
