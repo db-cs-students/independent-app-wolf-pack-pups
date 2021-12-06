@@ -19,16 +19,18 @@ struct AddToDoTab: View {
     var body: some View {
         NavigationView {
             CustomGradient {
-                VStack(alignment: .center, spacing: 10.0) {
+                VStack {
                     CustomPickerView()
-                    PurpleTextField(placeholder: "Task Name", value: $name)
-                    PurpleTextField(placeholder: "Room Number", value: $room)
-                    PurpleTextField(placeholder: "Category", value: $category)
-                    PurpleTextField(placeholder: "Date", value: $date)
-                    PurpleTextField(placeholder: "Time", value: $time)
-                    PurpleTextField(placeholder: "Guests", value: $guests)
-                    PurpleTextField(placeholder: "Other Notes", value: $othernotes)
-                    Spacer()
+                    VStack(alignment: .center, spacing: 10.0) {
+                        PurpleTextField(placeholder: "Task Name", value: $name)
+                        PurpleTextField(placeholder: "Room Number", value: $room)
+                        PurpleTextField(placeholder: "Category", value: $category)
+                        PurpleTextField(placeholder: "Date", value: $date)
+                        PurpleTextField(placeholder: "Time", value: $time)
+                        PurpleTextField(placeholder: "Guests", value: $guests)
+                        PurpleTextField(placeholder: "Other Notes", value: $othernotes)
+                        Spacer()
+                    }
                 }
             }
         }
