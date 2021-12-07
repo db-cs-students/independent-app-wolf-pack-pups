@@ -8,49 +8,60 @@
 import SwiftUI
 
 struct CustomPickerView: View {
-    @State var pickerSelection: ScreenSelection = .add
+    @State private var selectedScreen = 0
+    @ViewBuilder
     var body: some View {
-        NavigationView() {
-            NavigationLink(
-                destination: EditCategoriesTab(),
-                isActive: pickerSelection == .edit) {
-                VStack {
-                    Picker(selection: $pickerSelection, label: Text("Testing")) {
-                        ForEach(ScreenSelection.allCases, id: \.self) {
-                            Text($0.rawValue)
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .padding()
-                }
+        
+        if selectedScreen == 1 {
+            EditCategoriesTab()
+            if selectedScreen == 0 {
+                AddToDoTab()
             }
         }
-    }
-}
-
-enum ScreenSelection: View, CaseIterable {
-    case add = AddToDoTab()
-    case edit = EditCategoriesTab()
-}
-
-struct ChosenScreen {
-    var selectedScreen: ScreenSelection
-    
-    var body: some View {
-        switch selectedScreen {
-        case .add:
-           
-        case .edit:
-      
+        
+        VStack {
+            Picker(selection: $selectedScreen, label: Text("Picker"), content: {
+                Text("Add To-Do").tag(0)
+                Text("Edit Categories").tag(1)
+                
+            })
+            .pickerStyle(SegmentedPickerStyle())
+            .padding()
         }
     }
-    
 }
+
 
 
 struct CustomPickerView_Previews: PreviewProvider {
     static var previews: some View {
         CustomPickerView()
 
+    }
+}
+
+extension View {
+    /// Navigate to a new view.
+    /// - Parameters:
+    ///   - view: View to navigate to.
+    ///   - binding: Only navigates when this condition is `true`.
+    func navigate<NewView: View>(to view: NewView, when binding: Binding<Bool>) -> some View {
+        NavigationView {
+            ZStack {
+                self
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
+
+                NavigationLink(
+                    destination: view
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true),
+                    isActive: binding
+                ) {
+                    EmptyView()
+                }
+            }
+        }
+//        .navigationViewStyle(.stack)
     }
 }
