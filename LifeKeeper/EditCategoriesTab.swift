@@ -50,6 +50,7 @@ struct EditCategoriesTab: View {
 struct EditCategoriesTab_Previews: PreviewProvider {
     static var previews: some View {
         EditCategoriesTab()
+            .environmentObject(ToDos())
     }
 }
 

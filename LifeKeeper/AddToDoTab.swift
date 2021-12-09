@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddToDoTab: View {
+    @EnvironmentObject var modelData: ToDos
     @State private var name: String = ""
     @State private var room: String = ""
     @State private var category: String = ""
@@ -25,11 +26,16 @@ struct AddToDoTab: View {
                         PurpleTextField(placeholder: "Task Name", value: $name)
                         PurpleTextField(placeholder: "Room Number", value: $room)
                         PurpleTextField(placeholder: "Category", value: $category)
-                        PurpleTextField(placeholder: "Date", value: $date)
+//                        DatePicker(selection: <#T##Binding<Date>#>, label: <#T##() -> _#>)
                         PurpleTextField(placeholder: "Time", value: $time)
                         PurpleTextField(placeholder: "Guests", value: $guests)
                         PurpleTextField(placeholder: "Other Notes", value: $othernotes)
                         Spacer()
+                        Button(action: {
+                            modelData.addTodo(Todo(taskName: name, roomNumber: Int(room) ?? 10, categorySelected: category, date: Date(), time: 10, guestsInvited: guests, notes: othernotes))
+                        }, label: {
+                            Text("Append")
+                        })
                     }
                 }
             }
@@ -40,6 +46,7 @@ struct AddToDoTab: View {
 struct AddToDoTab_Previews: PreviewProvider {
     static var previews: some View {
         AddToDoTab()
+            .environmentObject(ToDos())
     }
 }
 

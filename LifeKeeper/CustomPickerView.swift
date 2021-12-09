@@ -36,6 +36,7 @@ struct CustomPickerView: View {
 struct CustomPickerView_Previews: PreviewProvider {
     static var previews: some View {
         CustomPickerView()
+            .environmentObject(ToDos())
 
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var modelData: ToDos
     var body: some View {
         NavigationView {
             CustomGradient {
@@ -78,6 +79,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ToDos())
     }
 }
 
