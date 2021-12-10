@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EditCategoriesTab: View {
     let categories: [String] = []
-    @Binding var categoryname: String
+//    @Binding var categoryname: String
     var body: some View {
         NavigationView {
             
@@ -68,11 +68,11 @@ struct EditCategoriesTab: View {
 }
 
 struct EditCategoriesTab_Previews: PreviewProvider {
-    @State static var categoryname: String = ""
+//    @State static var categoryname: String = ""
     
     static var previews: some View {
 
-        EditCategoriesTab(categoryname: $categoryname)
+        EditCategoriesTab()
             .environmentObject(ToDos())
     }
 }
