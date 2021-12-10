@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D18FF92274C00B70091A66C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18FF91274C00B70091A66C /* Colors.swift */; };
+		3D5BAEFD275930C10020505B /* AddCategoryTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5BAEFC275930C10020505B /* AddCategoryTab.swift */; };
 		3D6549A62742CF6E00E24265 /* ToDoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6549A52742CF6E00E24265 /* ToDoDetails.swift */; };
 		3D7F6F2C2755440E00685B83 /* BackgroundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F6F2B2755440E00685B83 /* BackgroundsView.swift */; };
 		3D7F6F2E27554BAC00685B83 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7F6F2D27554BAC00685B83 /* Categories.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		3D18FF91274C00B70091A66C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3D5BAEFC275930C10020505B /* AddCategoryTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryTab.swift; sourceTree = "<group>"; };
 		3D6549A52742CF6E00E24265 /* ToDoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetails.swift; sourceTree = "<group>"; };
 		3D7F6F2B2755440E00685B83 /* BackgroundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundsView.swift; sourceTree = "<group>"; };
 		3D7F6F2D27554BAC00685B83 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				3D6549A52742CF6E00E24265 /* ToDoDetails.swift */,
 				3DB4273C2744200400CD69EB /* AddToDoTab.swift */,
 				3D8CFF4E27569341006A0462 /* EditCategoriesTab.swift */,
+				3D5BAEFC275930C10020505B /* AddCategoryTab.swift */,
 				3D18FF93274C00CE0091A66C /* Helpers */,
 				3D987089273ED3F400C24998 /* LifeKeeperApp.swift */,
 				3D98708B273ED3F400C24998 /* ContentView.swift */,
@@ -179,6 +182,7 @@
 				3D8CFF4F27569341006A0462 /* EditCategoriesTab.swift in Sources */,
 				3DC709F1275934E60030BF91 /* CustomPickerView.swift in Sources */,
 				3D6549A62742CF6E00E24265 /* ToDoDetails.swift in Sources */,
+				3D5BAEFD275930C10020505B /* AddCategoryTab.swift in Sources */,
 				3DB4273D2744200400CD69EB /* AddToDoTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

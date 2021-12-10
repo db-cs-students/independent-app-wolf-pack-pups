@@ -37,6 +37,7 @@ struct AddToDoTab: View {
                             Text("Append")
                         })
                     }
+
                 }
             }
         }
