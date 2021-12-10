@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AddCategoryTab: View {
+    @EnvironmentObject var modelData: ToDos
+    @Environment(\.presentationMode) var presentation
+
     @State private var categoryname: String = ""
     @State private var categories: String = ""
     var body: some View {
@@ -18,18 +21,22 @@ struct AddCategoryTab: View {
                     
                     
                     HStack(alignment: .top, spacing: 60) {
-                            Text("Add Category")
-                            
-                        
+                        Text("Add Category")
                             .font(.system(size: 15))
-                            .foregroundColor(.white)
-                            .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.purple).frame(width: 288, height: 25))
+                            .foregroundColor(Color.white)
+                            .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.purple).frame(width: 140, height: 25))
+                        
+                        
+                        Text("Edit Categories")
+                            .font(.system(size: 15))
                     }
                     .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.gray).frame(width: 300, height: 30))
+                    .padding()
                     Spacer()
                     
                     TextField("Category Name", text: $categoryname)
                         .font(.system(size: 25.0))
+                        .padding()
                         .frame(width: 300, height: 200)
                         .background(RoundedRectangle(cornerRadius: 20.0)
                                         .opacity(0.1)
@@ -42,6 +49,13 @@ struct AddCategoryTab: View {
                     Spacer()
                         .padding()
                     
+                    Button(action: {
+                            modelData.addCategory(Category(name: categoryname))
+                            self.presentation.wrappedValue.dismiss()
+
+                    }) {
+                        Text("Add Category")
+                    }
                 }
                 
             }
@@ -52,6 +66,7 @@ struct AddCategoryTab: View {
 struct AddCategoryTab_Previews: PreviewProvider {
     static var previews: some View {
         AddCategoryTab()
+            .environmentObject(ToDos())
     }
 }
 
