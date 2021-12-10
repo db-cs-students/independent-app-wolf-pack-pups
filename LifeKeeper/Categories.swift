@@ -8,19 +8,33 @@
 import SwiftUI
 
 struct Categories: View {
+    @State var showingSheet = false
+    @EnvironmentObject var modelData: ToDos
+    
+    var todayTodos: [Todo] {
+        modelData.todoList.filter { todo in
+            todo.date != Date()
+        }
+    }
+    var futureTodos: [Todo] {
+        modelData.todoList.filter { todo in
+            todo.date == Date()
+        }
+    }
+    
+    
     var body: some View {
         CustomGradient{
             VStack {
                 HStack {
                     ZStack {
                         Capsule()
-                            .fill(Color.gray)
+                            .fill(Color.white)
                         Text("All")
-                            .foregroundColor(Color.white)
+                            .foregroundColor(Color("DarkGray"))
                         
                         
                     }
-                    
                     ZStack {
                         Capsule()
                             .fill(Color("Loblolly"))
@@ -55,53 +69,61 @@ struct Categories: View {
                         .foregroundColor(Color("DarkGray"))
                 }
                 VStack {
-                    TaskView(assignment: "Finish Project", date: "Nov 8 2021")
-                    TaskView(assignment: "Copper Lab Report", date: "Nov 8 2021")
-                    TaskView(assignment: "Finish Application", date: "Nov 8 2021")
-                }
-                HStack {
+                    ForEach(todayTodos) { item in
+                        TaskView(assignment: item.taskName, date: item.date)
+                    }
                     Text("Future")
                         .foregroundColor(Color("DarkGray"))
                         .font(.largeTitle)
                         .multilineTextAlignment(.leading)
                         .padding([.bottom, .trailing])
                         .padding(.trailing, 250)
+                    
+                    ForEach(futureTodos) { item in
+                        TaskView(assignment: item.taskName, date: item.date)
+                    }
                 }
-                TaskView(assignment: "WII Presentation", date: "Nov 24 2021")
-                TaskView(assignment: "Submit Homework #8", date: "Nov 27 2021")
-                TaskView(assignment: "Work 7PM-9PM", date: "Nov 28 2021")
-                TaskView(assignment: "Submit Homework #17", date: "Nov 28 2021")
-                
             }
-            
         }
+        .navigationBarItems(trailing: Button("+") {
+            showingSheet.toggle()
+        }
+        .sheet(isPresented: $showingSheet) {
+            NavigationView {
+                AddToDoTab()
+                    .navigationBarItems(leading: Button("Cancel", action:{showingSheet.toggle()}), trailing: Button("Add", action:{showingSheet.toggle()}))
+            }
+        }
+        )
+        
     }
 }
 
 struct Categories_Previews: PreviewProvider {
     static var previews: some View {
         Categories()
+            .environmentObject(ToDos())
     }
 }
 
 struct TaskView: View {
     let assignment: String
-    let date: String
+    let date: Date
     
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
-                .fill(Color.gray)
-                .frame(width: 351, height: 58, alignment: .center)
+                .fill(Color("Transgray"))
+                .frame(width: 351, height: 60, alignment: .center)
             VStack (alignment: .leading) {
                 Text(assignment)
                     .font(.title2)
                     .foregroundColor(Color("DarkGray"))
-                Text(date)
+                Text("\(date, style: .date)")
                     .foregroundColor(Color("DarkGray"))
                     .padding(.leading)
             }
-            .padding(.leading)
+            .padding(.leading, 25)
         }
     }
 }

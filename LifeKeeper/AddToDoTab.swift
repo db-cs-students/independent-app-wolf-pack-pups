@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddToDoTab: View {
+    @EnvironmentObject var modelData: ToDos
     @State private var name: String = ""
     @State private var room: String = ""
     @State private var category: String = ""
@@ -15,46 +16,28 @@ struct AddToDoTab: View {
     @State private var time: String = ""
     @State private var guests: String = ""
     @State private var othernotes: String = ""
+    @State public var selectedScreen = 0
     var body: some View {
         NavigationView {
             CustomGradient {
-                VStack(alignment: .center, spacing: 10.0) {
-                    HStack(alignment: .top) {
-                        Text("Cancel")
-                            .font(.system(size: 20))
+                VStack {
+                    CustomPickerView()
+                    VStack(alignment: .center, spacing: 10.0) {
+                        PurpleTextField(placeholder: "Task Name", value: $name)
+                        PurpleTextField(placeholder: "Room Number", value: $room)
+                        PurpleTextField(placeholder: "Category", value: $category)
+//                        DatePicker(selection: <#T##Binding<Date>#>, label: <#T##() -> _#>)
+                        PurpleTextField(placeholder: "Time", value: $time)
+                        PurpleTextField(placeholder: "Guests", value: $guests)
+                        PurpleTextField(placeholder: "Other Notes", value: $othernotes)
                         Spacer()
-                        NavigationLink(destination: ToDoDetails(name: name, room: room, date: date, category: category, time: time, guests: guests, othernotes: othernotes)) {
-                            Text("Add")
-                        }
-                        .font(.system(size: 20))
+                        Button(action: {
+                            modelData.addTodo(Todo(taskName: name, roomNumber: Int(room) ?? 10, categorySelected: category, date: Date(), time: 10, guestsInvited: guests, notes: othernotes))
+                        }, label: {
+                            Text("Append")
+                        })
                     }
-                    .padding()
-                    
-                    HStack(alignment: .top, spacing: 60) {
-                        Text("Add To-Do")
-                            .font(.system(size: 15))
-                            .foregroundColor(Color.white)
-                            .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.purple).frame(width: 100, height: 25))
-                        
-                        Text("Edit Categories")
-                            .font(.system(size: 15))
-                            
-                        
-                    }
-                    .background(RoundedRectangle(cornerRadius: 20.0).fill(Color.gray).frame(width: 300, height: 30))
-                    .padding()
-                    
-                    
-                    PurpleTextField(placeholder: "Task Name", value: $name)
-                    PurpleTextField(placeholder: "Room Number", value: $room)
-                    PurpleTextField(placeholder: "Category", value: $category)
-                    PurpleTextField(placeholder: "Date", value: $date)
-                    PurpleTextField(placeholder: "Time", value: $time)
-                    PurpleTextField(placeholder: "Guests", value: $guests)
-                    PurpleTextField(placeholder: "Other Notes", value: $othernotes)
-                        
 
-                    Spacer()
                 }
             }
         }
@@ -64,6 +47,7 @@ struct AddToDoTab: View {
 struct AddToDoTab_Previews: PreviewProvider {
     static var previews: some View {
         AddToDoTab()
+            .environmentObject(ToDos())
     }
 }
 

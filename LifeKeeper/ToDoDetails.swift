@@ -70,5 +70,6 @@ struct ToDoDetails: View {
 struct ToDoDetails_Previews: PreviewProvider {
     static var previews: some View {
         ToDoDetails(name: "Finish homework", room: "W287", date: "11/5/21", category: "History", time: "2PM", guests: "Bob, Sue, Karen", othernotes: "Complete by 2PM and make sure it's submitted in MLA formatting.")
+                .environmentObject(ToDos())
     }
 }

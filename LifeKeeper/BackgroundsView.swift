@@ -44,5 +44,6 @@ struct CustomGradient<Content: View>: View {
 struct BackgroundsView_Previews: PreviewProvider {
     static var previews: some View {
         BackgroundsView()
+            .environmentObject(ToDos())
     }
 }

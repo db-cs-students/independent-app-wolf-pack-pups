@@ -71,7 +71,9 @@ struct EditCategoriesTab_Previews: PreviewProvider {
     @State static var categoryname: String = ""
     
     static var previews: some View {
+
         EditCategoriesTab(categoryname: $categoryname)
+            .environmentObject(ToDos())
     }
 }
 
