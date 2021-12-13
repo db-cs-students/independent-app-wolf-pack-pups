@@ -9,14 +9,14 @@ import SwiftUI
 
 struct EditCategoriesTab: View {
     @EnvironmentObject var modelData: ToDos
-//    let categories: [String] = []
-//    @Binding var categoryname: String
+    //    let categories: [String] = []
+    //    @Binding var categoryname: String
     var body: some View {
         NavigationView {
             
             CustomGradient {
                 VStack(alignment: .center, spacing: 10.0) {
-                   
+                    
                     
                     HStack(alignment: .top, spacing: 60) {
                         Text("Add To-Do")
@@ -69,10 +69,10 @@ struct EditCategoriesTab: View {
 }
 
 struct EditCategoriesTab_Previews: PreviewProvider {
-//    @State static var categoryname: String = ""
+    //    @State static var categoryname: String = ""
     
     static var previews: some View {
-
+        
         EditCategoriesTab()
             .environmentObject(ToDos())
     }
@@ -95,7 +95,7 @@ struct PurpleCategory: View {
             
             Text(name)
                 .font(.system(size: 18.0))
-                
+            
         }
         
         .padding()

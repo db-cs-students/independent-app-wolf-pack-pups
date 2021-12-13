@@ -27,10 +27,10 @@ struct ToDoDetails: View {
                         .font(.system(size: 23.0))
                     Text("Back")
                         .font(.system(size: 23.0))
-
+                    
                 }
                 
-
+                
                 Text(name)
                     .font(.system(size: 40.0))
                     .padding()
@@ -57,10 +57,10 @@ struct ToDoDetails: View {
                     
                 }
                 .padding()
-            
+                
             }
             
-                
+            
         }
         
         
@@ -70,6 +70,6 @@ struct ToDoDetails: View {
 struct ToDoDetails_Previews: PreviewProvider {
     static var previews: some View {
         ToDoDetails(name: "Finish homework", room: "W287", date: "11/5/21", category: "History", time: "2PM", guests: "Bob, Sue, Karen", othernotes: "Complete by 2PM and make sure it's submitted in MLA formatting.")
-                .environmentObject(ToDos())
+            .environmentObject(ToDos())
     }
 }

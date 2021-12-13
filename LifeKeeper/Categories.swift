@@ -113,19 +113,19 @@ struct TaskView: View {
     var borderColor: Color {
         return [Color("paleYellow"), Color("Loblolly"), Color("PaleOrange")].randomElement()!
     }
-
+    
     var body: some View {
         ZStack (alignment: .leading) {
             Capsule()
                 .fill(Color("Transgray"))
-
+                
                 .frame(width: 351, height: 60, alignment: .center)
                 .overlay(
                     RoundedRectangle(cornerRadius: 40)
                         .stroke((borderColor),
                                 lineWidth: 3)
                 )
-
+            
             VStack (alignment: .leading) {
                 Text(assignment)
                     .font(.title2)
