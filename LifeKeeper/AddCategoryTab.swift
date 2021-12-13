@@ -10,7 +10,7 @@ import SwiftUI
 struct AddCategoryTab: View {
     @EnvironmentObject var modelData: ToDos
     @Environment(\.presentationMode) var presentation
-
+    
     @State private var categoryname: String = ""
     @State private var categories: String = ""
     var body: some View {
@@ -50,9 +50,9 @@ struct AddCategoryTab: View {
                         .padding()
                     
                     Button(action: {
-                            modelData.addCategory(Category(name: categoryname))
-                            self.presentation.wrappedValue.dismiss()
-
+                        modelData.addCategory(Category(name: categoryname))
+                        self.presentation.wrappedValue.dismiss()
+                        
                     }) {
                         Text("Add Category")
                     }

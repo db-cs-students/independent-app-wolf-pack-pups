@@ -140,11 +140,6 @@ struct Title: View {
     }
 }
 
-extension Color {
-    static let darkGray = Color("DarkGray")
-    static let barney = Color("BarneyBlue")
-}
-
 struct WeatherStats: View {
     var temp: Int
     var body: some View {

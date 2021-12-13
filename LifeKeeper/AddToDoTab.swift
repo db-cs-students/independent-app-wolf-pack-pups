@@ -26,7 +26,7 @@ struct AddToDoTab: View {
                         PurpleTextField(placeholder: "Task Name", value: $name)
                         PurpleTextField(placeholder: "Room Number", value: $room)
                         PurpleTextField(placeholder: "Category", value: $category)
-//                        DatePicker(selection: <#T##Binding<Date>#>, label: <#T##() -> _#>)
+                        //                        DatePicker(selection: <#T##Binding<Date>#>, label: <#T##() -> _#>)
                         PurpleTextField(placeholder: "Time", value: $time)
                         PurpleTextField(placeholder: "Guests", value: $guests)
                         PurpleTextField(placeholder: "Other Notes", value: $othernotes)
@@ -37,7 +37,7 @@ struct AddToDoTab: View {
                             Text("Append")
                         })
                     }
-
+                    
                 }
             }
         }

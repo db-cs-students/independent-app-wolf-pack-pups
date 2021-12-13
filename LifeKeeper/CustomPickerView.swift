@@ -37,7 +37,7 @@ struct CustomPickerView_Previews: PreviewProvider {
     static var previews: some View {
         CustomPickerView()
             .environmentObject(ToDos())
-
+        
     }
 }
 
@@ -52,7 +52,7 @@ extension View {
                 self
                     .navigationBarTitle("")
                     .navigationBarHidden(true)
-
+                
                 NavigationLink(
                     destination: view
                         .navigationBarTitle("")
@@ -63,6 +63,6 @@ extension View {
                 }
             }
         }
-//        .navigationViewStyle(.stack)
+        //        .navigationViewStyle(.stack)
     }
 }
