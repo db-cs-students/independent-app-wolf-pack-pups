@@ -21,15 +21,26 @@ struct Todo: Identifiable, Hashable, Codable {
     
 }
 
+struct Category: Identifiable, Hashable {
+    var id: UUID = UUID()
+    var name: String
+}
+
 final class ToDos: ObservableObject {
     @Published var todoList: [Todo] = [
         Todo(taskName: "Do Homework", roomNumber: 304, categorySelected: "Chemistry", date: stringDate(year: 2023, month: 11, day: 1), time: 1234, guestsInvited: "Karen, Sue, Bob", notes: "Complete early for extra credit"),
         Todo(taskName: "Do Homework", roomNumber: 304, categorySelected: "Chemistry", date: Date(), time: 1234, guestsInvited: "Karen, Sue, Bob", notes: "Complete early for extra credit")
     ]
     
+    @Published var categories: [Category] = []
+    
     func addTodo(_ todo: Todo) {
         // Validate or use optional binding
         todoList.append(todo)
+    }
+    
+    func addCategory(_ category: Category) {
+        categories.append(category)
     }
 }
 

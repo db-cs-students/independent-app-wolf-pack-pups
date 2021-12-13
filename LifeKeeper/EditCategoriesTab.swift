@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct EditCategoriesTab: View {
-    let categories: [String] = []
+    @EnvironmentObject var modelData: ToDos
+//    let categories: [String] = []
 //    @Binding var categoryname: String
     var body: some View {
         NavigationView {
@@ -31,10 +32,10 @@ struct EditCategoriesTab: View {
                     .padding()
                     
                     Group {
-                        if !categories.isEmpty {
+                        if !modelData.categories.isEmpty {
                             ScrollView {
-                                ForEach(categories, id: \.self) { category in
-                                    PurpleCategory()
+                                ForEach(modelData.categories, id: \.self) { category in
+                                    PurpleCategory(name: category.name)
                                     
                                 }
                             }
@@ -79,6 +80,7 @@ struct EditCategoriesTab_Previews: PreviewProvider {
 
 
 struct PurpleCategory: View {
+    var name: String
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 15)
@@ -91,7 +93,7 @@ struct PurpleCategory: View {
                 )
                 .shadow(radius: 5, x: 5, y: 5)
             
-            Text("")
+            Text(name)
                 .font(.system(size: 18.0))
                 
         }
