@@ -59,7 +59,7 @@ struct Categories: View {
                 .frame(height: 28, alignment: .center)
                 
                 HStack {
-                    Text("Today (3)")
+                    Text("Today (\(todayTodos.endIndex))")
                         .foregroundColor(Color("DarkGray"))
                         .font(.largeTitle)
                         .multilineTextAlignment(.leading)
